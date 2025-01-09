@@ -21,7 +21,7 @@ date (optional) -   h (past hour)
 
 **Search web for news articles**
 ```bash
-naptha run tool:search_news_tool -p "tool_name=search_web_tool query=NapthaAI"
+naptha run tool:search_web_tool -p "tool_name=search_news_tool query=NapthaAI"
 ```
 
 **Search web for given query**
