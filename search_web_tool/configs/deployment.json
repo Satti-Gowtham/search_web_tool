@@ -4,9 +4,11 @@
         "module": {
             "name": "search_web_tool",
             "description": "Search tool that utilizes Serper to search web",
-            "module_type": "agent",
+            "parameters": "{tool_name: str, query: str, location: str, date: str}",
+            "module_type": "tool",
             "module_version": "v0.1",
-            "module_entrypoint": "run.py"
+            "module_entrypoint": "run.py",
+            "execution_type": "package"
         },
         "node": {"ip": "localhost"},
         "config": {

@@ -14,7 +14,7 @@ logger = get_logger(__name__)
 class SearchNewsTool:
     def __init__(self, tool_deployment: ToolDeployment):
         self.tool_deployment = tool_deployment
-        self.api_key = os.environ['SERPER_API_KEY']
+        self.api_key = os.getenv("SERPER_API_KEY")
         self.serper_url = "https://google.serper.dev"
 
         if self.api_key is None:
@@ -67,7 +67,7 @@ class SearchNewsTool:
 def run(module_run: Dict, *args, **kwargs):
     module_run = ToolRunInput(**module_run)
     module_run.inputs = InputSchema(**module_run.inputs)
-    search_news_tool = SearchNewsTool(module_run)
+    search_news_tool = SearchNewsTool(module_run.deployment)
     method = getattr(search_news_tool, module_run.inputs.tool_name, None)
 
     if not method:
