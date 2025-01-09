@@ -1,0 +1,10 @@
+[
+    {
+        "name": "tool_deployment_1",
+        "module": {"name": "search_web_tool"},
+        "node": {"ip": "localhost"},
+        "config": {
+            "config_name": "tool_config_1"
+        }
+    }
+]
