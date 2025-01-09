@@ -1,7 +1,13 @@
 [
     {
         "name": "tool_deployment_1",
-        "module": {"name": "search_web_tool"},
+        "module": {
+            "name": "search_web_tool",
+            "description": "Search tool that utilizes Serper to search web",
+            "module_type": "agent",
+            "module_version": "v0.1",
+            "module_entrypoint": "run.py"
+        },
         "node": {"ip": "localhost"},
         "config": {
             "config_name": "tool_config_1"
