@@ -1,5 +1,5 @@
 # Search Web Tool
-This is a Naptha tool module for searching web using the SerperAI API. The tool returns the title, webpage url for a given query. Tool modules can be run independently or used by agents.
+This is a Naptha tool module for searching web using the Serper API. The tool returns the title, webpage url for a given query. Tool modules can be run independently or used by agents.
 
 ## Usage
 

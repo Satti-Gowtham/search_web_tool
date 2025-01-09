@@ -21,13 +21,13 @@ class SearchNewsTool:
             raise ValueError("API key is not set")
 
     def search_news_tool(self, inputs: InputSchema):
-        """Run the module to search news from the prompt using SerperAI API"""
+        """Run the module to search news from the prompt using Serper API"""
         logger.info(f"Getting news from the prompt: {inputs.query}")
 
         return self.request_serper(inputs, "news").get("news", [])
     
     def search_web_tool(self, inputs: InputSchema):
-        """Run the module to search web from the prompt using SerperAI API"""
+        """Run the module to search web from the prompt using Serper API"""
         logger.info(f"Getting web results from the prompt: {inputs.query}")
 
         return self.request_serper(inputs, "search").get("organic", [])
